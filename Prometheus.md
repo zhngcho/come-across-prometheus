@@ -24,6 +24,12 @@
 
 ![](./assets/weather-station-relation.svg)
 
+
+
+##### 记录完气象数据之后
+
+![](./assets/weather-station-relation-step-1.svg)
+
 #### 教程目标
 
 - 对 promethes 的整体架构有一个感性的认识
