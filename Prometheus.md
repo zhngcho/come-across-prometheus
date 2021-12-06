@@ -1,6 +1,8 @@
-### Prometheus 简介
+### Prometheus（一个小小气象员）
 
 [toc]
+
+![](/home/zhngcho/Documents/come-across-prometheus/assets/stock-photo-weather-station-in-a-field-with-vineyard-woman-farmer-with-tablet-at-wine-farm-1945251328.jpg)
 
 #### 教程目标
 
@@ -20,14 +22,14 @@
 
 
 
-1. pull 模型，prometheus 主动通过 http 请求收集指标
-2. prometheus 把定期收集到的指标存成时间序列
-3. prometheus 通过一个自己的 http 服务接收 promQL 对外提供数据查询服务
-4. prometheus 通过配置的预聚合规则，通过已有时间序列生成新的时间序列
-5. prometheus 通过配置的报警规则推送报警信息给 alertmanager
+1. pull 模型，prometheus 主动通过 http 请求收集指标 (prometheus 就是个四处奔波的气象记录员)
+2. prometheus 把定期收集到的指标存成时间序列（温度{省:BJ, 市: BJ, 县: HD, 公司: DG } (2021-01-01, 16), (2021-01-02, 15), (2021-01-03, 17) ... ）
+3. prometheus 通过一个自己的 http 服务接收 promQL 对外提供数据查询服务（根据自己记录的气象指标，如温度、湿度、风力等为别人提供查询服务）
+4. prometheus 通过配置的报警规则推送报警信息给 alertmanager （如果温度大于40度就马上联系政府）
+5. prometheus 通过配置的预聚合规则，通过已有时间序列生成新的时间序列（总有人问华氏度，那不妨用摄氏度的记录誊写一份华氏度的记录，免得每次都要百度查换算方式浪费时间和精力）
 6. prometheus 通过自己的 http 服务提供自身维护使用的 api
 
-#### exporter(node_exporter 为例)
+#### exporter(这是个气象站，以下以node_exporter 为例)
 
 - 作用： 暴露监控指标给 prometheus
 
