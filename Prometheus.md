@@ -1,8 +1,28 @@
-### Prometheus（一个小小气象员）
+### 小小气象员
 
 [toc]
 
-![](/home/zhngcho/Documents/come-across-prometheus/assets/stock-photo-weather-station-in-a-field-with-vineyard-woman-farmer-with-tablet-at-wine-farm-1945251328.jpg)
+
+
+#### 一句话描述下图
+
+![](./assets/stock-photo-weather-station-in-a-field-with-vineyard-woman-farmer-with-tablet-at-wine-farm-1945251328.jpg)
+
+
+
+在一片田野中有一个气象站，一名气象员正在把气象数据记录到记录表上
+
+##### 描述中包含的元素
+
+- 一片田野
+- 一个气象站
+- 一名气象员
+- 气象数据
+- 记录表
+
+##### 元素之间的关系
+
+![](./assets/weather-station-relation.svg)
 
 #### 教程目标
 
@@ -96,7 +116,7 @@
 
 
 
-![time-series.png](/home/zhngcho/Documents/comeaross-promethues/assets/time-series-arrow.svg)
+![time-series.png](./assets/time-series-arrow.svg)
 
 ​			
 
@@ -106,7 +126,7 @@
 
    - 示意图
 
-     ![promql-vector](/home/zhngcho/Documents/comeaross-promethues/assets/promql-instant-vector.svg)
+     ![promql-vector](./assets/promql-instant-vector.svg)
 
    - 语法 `promhttp_metric_handler_requests_total{code="200"} @ 624669000000 offset 5m`
 
@@ -122,7 +142,7 @@
 
    - 示意图
 
-     ![promql-range-vector](/home/zhngcho/Documents/comeaross-promethues/assets/promql-range-vector.svg)
+     ![promql-range-vector](./assets/promql-range-vector.svg)
 
    - 语法 `promhttp_metric_handler_requests_total{code="200"} [2m] @ 624669000000 offset 5m`
 
